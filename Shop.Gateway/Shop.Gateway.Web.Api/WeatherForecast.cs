@@ -1,6 +1,6 @@
 using System;
 
-namespace Shop.Api
+namespace Shop.Gateway.Web.Api
 {
     public class WeatherForecast
     {

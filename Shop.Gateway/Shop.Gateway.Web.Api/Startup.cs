@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Shop.Api
+namespace Shop.Gateway.Web.Api
 {
     public class Startup
     {

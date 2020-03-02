@@ -1,0 +1,26 @@
+version: '3.7'
+networks:
+    eshop_prod_net:
+      name: 'eshoppd' 
+
+services:
+
+    gateway:
+        build: ./Shop.Gateway
+        restart: always
+        container_name: 'shop-gateway'
+        ports:
+          - 8000:80
+        working_dir: '/app'
+        networks:
+          - eshop_prod_net
+
+    catalog:
+        build: ./Shop.Catalog
+        restart: always
+        container_name: 'shop-catalog'
+        ports:
+            - 8080:80
+        working_dir: '/app'
+        networks:
+            - eshop_prod_net
